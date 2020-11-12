@@ -6,6 +6,8 @@ import requests
 import tensorflow as tf
 import pandas as pd #want to use pandas because we want it in a df format to pass into model
 
+from flask import request, redirect
+
 
 app = Flask(__name__)
 CORS(app, resources={
@@ -50,7 +52,16 @@ def index():
     return "route testing, try /predict"
 
 
-@app.route("/predict", methods=["GET","POST"])
+# @app.route("/predict", methods = ["POST"])
+# def predict():
+#     year = request.form['year']
+#     print("The year is '" + year + "'")
+#     return redirect('/')
+
+
+
+
+@app.route("/predict", methods=["POST"])
 def predict():
 
     year = request.form['year']

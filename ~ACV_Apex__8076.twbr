@@ -522,7 +522,7 @@
             <column-instance column='[Sold Price]' derivation='Sum' name='[sum:Sold Price:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.15s7kay1wrf1xm102kkzy08trfcd].[attr:Subdivision:nk]'>
-            <groupfilter function='level-members' level='[attr:Subdivision:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='empty-level' member='[attr:Subdivision:nk]' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.15s7kay1wrf1xm102kkzy08trfcd].[none:Subdivision:nk]'>
             <groupfilter from='&quot;Abbey Run&quot;' function='range' level='[none:Subdivision:nk]' to='&quot;Wyndridge&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />

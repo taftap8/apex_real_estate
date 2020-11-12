@@ -50,7 +50,7 @@ def index():
     return "route testing, try /predict"
 
 
-@app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["GET","POST"])
 def predict():
 
     year = request.form['year']

@@ -53,7 +53,7 @@ def index():
 @app.route("/predict", methods=["GET"])
 def predict():
     
-    test_input = [1980, 4 , 3, 1500, 0, 10, 1, 1, 193]
+    test_input = [1980, 4 , 3, 3000, 0, 10, 1, 1, 193]
 
     #normalize inputs
     test_input_normal = (test_input-x_min)/(x_max-x_min)

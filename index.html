@@ -34,6 +34,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
   <script src="lodash.js"></script>
+
   <!--<script src="logic.js"></script>-->
 
 
@@ -143,10 +144,10 @@
                   <form onsubmit='return false'>
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
-                        <label for="year built">Enter Home Type</label>
-                        <select id="hometype">
-                          <option value="1">Townhouse</option>
-                          <option value="2">Single Family Home</option>
+                        <label for="hometype">Enter Home Type</label>
+                        <select id="hometype" onchange="hometype()">
+                          <option value="1">townhouse</option>
+                          <option value="2">single family home</option>
                         </select>
                       </li>
                     </ul>
@@ -372,42 +373,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-  <!-- <script src="./static/js/app.js"></script> -->
+  <script src="logic.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-
-    var select = document.getElementById("subdivision");
-    var elmts = [
-      "Not in a Subdivision",
-      "Abbey Run",
-      "Abbington",
-      "Amherst",
-      "Amity Fields",
-      "Arcadia Ridge",
-      "Arcadia West",
-      "Ashley Downs",
-      "Autumnwood"
-
-    ];
-
-
-    // Main function 
-    function GFG_Fun() {
-      for (var i = 0; i < elmts.length; i++) {
-        var optn = elmts[i];
-        var el = document.createElement("option");
-        el.textContent = optn;
-        el.value = optn;
-        select.appendChild(el);
-      }
-
-    }
-
-    GFG_Fun();
-  </script>
-
+  
 </body>
 
 </html>

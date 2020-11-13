@@ -50,23 +50,16 @@ y_max = y.max()
 @app.route("/", methods=["GET"])
 def index():
     return "route testing, try /predict"
-
-
-# @app.route("/predict", methods = ["POST"])
-# def predict():
-#     year = request.form['year']
-#     print("The year is '" + year + "'")
-#     return redirect('/')
+    #return render_template("index.html")
 
 
 
 
-@app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["GET","POST"])
 def predict():
 
-    year = request.form['year']
-    
-    test_input = [year, 4 , 3, 1500, 0, 10, 1, 1, 193]
+
+    test_input = [1984, 4 , 3, 1500, 0, 10, 1, 1, 193]
 
     #normalize inputs
     test_input_normal = (test_input-x_min)/(x_max-x_min)

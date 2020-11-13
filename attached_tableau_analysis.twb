@@ -1,0 +1,1100 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.1018.2303                               -->
+<workbook source-build='2020.3.2 (20203.20.1018.2303)' source-platform='win' version='18.1' xml:base='https://prod-useast-b.online.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='attached_tableau_analysis' path='/t/anthonyenglishssite/workbooks' revision='1.3' site='anthonyenglishssite' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='attached_apex' inline='true' name='federated.1rv654i0bwqutf175ts2w1u5am9o' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='attached_apex' name='textscan.1hwr5cc0lwdo5c17c7zw40ibd17r'>
+            <connection class='textscan' directory='C:/Users/kickboxerva/Desktop/Bootcamp Files/apex_real_estate' filename='attached_apex.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1hwr5cc0lwdo5c17c7zw40ibd17r' name='detached_apex.csv' table='[detached_apex#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='MLS #' ordinal='0' />
+            <column datatype='string' name='Status' ordinal='1' />
+            <column datatype='string' name='Address' ordinal='2' />
+            <column datatype='string' name='City' ordinal='3' />
+            <column datatype='string' name='Zip' ordinal='4' />
+            <column datatype='date' name='Closing Date' ordinal='5' />
+            <column datatype='string' name='Subdivision' ordinal='6' />
+            <column datatype='integer' name='LvngAreaSF' ordinal='7' />
+            <column datatype='integer' name='YrBlt' ordinal='8' />
+            <column datatype='integer' name='Beds' ordinal='9' />
+            <column datatype='integer' name='FBths' ordinal='10' />
+            <column datatype='integer' name='HBths' ordinal='11' />
+            <column datatype='string' name='Property Type' ordinal='12' />
+            <column datatype='real' name='List Price' ordinal='13' />
+            <column datatype='real' name='Sold Price' ordinal='14' />
+            <column datatype='integer' name='Days On Market' ordinal='15' />
+            <column datatype='string' name='HOA Y/N' ordinal='16' />
+            <column datatype='integer' name='Garage' ordinal='17' />
+            <column datatype='string' name='Acres' ordinal='18' />
+            <column datatype='real' name='Sold Price/List Price' ordinal='19' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1hwr5cc0lwdo5c17c7zw40ibd17r' name='detached_apex.csv' table='[detached_apex#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='MLS #' ordinal='0' />
+            <column datatype='string' name='Status' ordinal='1' />
+            <column datatype='string' name='Address' ordinal='2' />
+            <column datatype='string' name='City' ordinal='3' />
+            <column datatype='string' name='Zip' ordinal='4' />
+            <column datatype='date' name='Closing Date' ordinal='5' />
+            <column datatype='string' name='Subdivision' ordinal='6' />
+            <column datatype='integer' name='LvngAreaSF' ordinal='7' />
+            <column datatype='integer' name='YrBlt' ordinal='8' />
+            <column datatype='integer' name='Beds' ordinal='9' />
+            <column datatype='integer' name='FBths' ordinal='10' />
+            <column datatype='integer' name='HBths' ordinal='11' />
+            <column datatype='string' name='Property Type' ordinal='12' />
+            <column datatype='real' name='List Price' ordinal='13' />
+            <column datatype='real' name='Sold Price' ordinal='14' />
+            <column datatype='integer' name='Days On Market' ordinal='15' />
+            <column datatype='string' name='HOA Y/N' ordinal='16' />
+            <column datatype='integer' name='Garage' ordinal='17' />
+            <column datatype='string' name='Acres' ordinal='18' />
+            <column datatype='real' name='Sold Price/List Price' ordinal='19' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MLS #</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MLS #]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>MLS #</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Status]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Status</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Address]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Address</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Zip</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Zip]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Zip</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Closing Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Closing Date]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Closing Date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subdivision</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Subdivision]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Subdivision</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LvngAreaSF</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LvngAreaSF]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>LvngAreaSF</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YrBlt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YrBlt]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>YrBlt</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Beds</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Beds]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Beds</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FBths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FBths]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>FBths</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HBths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[HBths]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>HBths</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Property Type]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Property Type</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>List Price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[List Price]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>List Price</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sold Price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sold Price]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Sold Price</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days On Market</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Days On Market]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Days On Market</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HOA Y/N</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HOA Y/N]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>HOA Y/N</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Garage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Garage]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Garage</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Acres</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Acres]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Acres</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sold Price/List Price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sold Price/List Price]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Sold Price/List Price</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Profit' datatype='string' name='[Calculation_557039024843464709]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF &#13;&#10;[Sold Price/List Price] &gt; 1&#13;&#10;THEN&#13;&#10;&quot;Profitable&quot;&#13;&#10;ELSE&#13;&#10;&quot;Not Profitable&quot;&#13;&#10;END' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='F Bths' datatype='integer' name='[FBths]' role='measure' type='quantitative' />
+      <column caption='H Bths' datatype='integer' name='[HBths]' role='measure' type='quantitative' />
+      <column caption='Hoa Y/N' datatype='string' name='[HOA Y/N]' role='dimension' type='nominal' />
+      <column caption='Lvng Area SF' datatype='integer' name='[LvngAreaSF]' role='measure' type='quantitative' />
+      <column caption='Mls #' datatype='integer' name='[MLS #]' role='measure' type='quantitative' />
+      <column aggregation='None' datatype='integer' name='[Sold Price (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='3' formula='[Sold Price]' peg='0' size='9117' />
+      </column>
+      <column caption='Sold Price/List Price1' datatype='real' name='[Sold Price/List Price]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Sold Price]' role='measure' type='quantitative' />
+      <column caption='Yr Blt' datatype='integer' name='[YrBlt]' role='dimension' type='quantitative' />
+      <column datatype='string' name='[Zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='detached_apex.csv' datatype='table' name='[__tableau_internal_object_id__].[detached_apex.csv_A5B99F0E1ECD4872859E12A1AA053BCA]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_557039024843464709]' derivation='None' name='[none:Calculation_557039024843464709:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_557039024843464709:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Profitable&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Not Profitable&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='detached_apex.csv' id='detached_apex.csv_A5B99F0E1ECD4872859E12A1AA053BCA'>
+            <properties context=''>
+              <relation connection='textscan.1hwr5cc0lwdo5c17c7zw40ibd17r' name='detached_apex.csv' table='[detached_apex#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='MLS #' ordinal='0' />
+                  <column datatype='string' name='Status' ordinal='1' />
+                  <column datatype='string' name='Address' ordinal='2' />
+                  <column datatype='string' name='City' ordinal='3' />
+                  <column datatype='string' name='Zip' ordinal='4' />
+                  <column datatype='date' name='Closing Date' ordinal='5' />
+                  <column datatype='string' name='Subdivision' ordinal='6' />
+                  <column datatype='integer' name='LvngAreaSF' ordinal='7' />
+                  <column datatype='integer' name='YrBlt' ordinal='8' />
+                  <column datatype='integer' name='Beds' ordinal='9' />
+                  <column datatype='integer' name='FBths' ordinal='10' />
+                  <column datatype='integer' name='HBths' ordinal='11' />
+                  <column datatype='string' name='Property Type' ordinal='12' />
+                  <column datatype='real' name='List Price' ordinal='13' />
+                  <column datatype='real' name='Sold Price' ordinal='14' />
+                  <column datatype='integer' name='Days On Market' ordinal='15' />
+                  <column datatype='string' name='HOA Y/N' ordinal='16' />
+                  <column datatype='integer' name='Garage' ordinal='17' />
+                  <column datatype='string' name='Acres' ordinal='18' />
+                  <column datatype='real' name='Sold Price/List Price' ordinal='19' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='detached_apex' inline='true' name='federated.0umg2nk0f8djqt1d97fts0cz6esz' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='detached_apex' name='textscan.1pfeyiu01s5oob16py4021kjiljl'>
+            <connection class='textscan' directory='C:/Users/kickboxerva/Desktop/Bootcamp Files/apex_real_estate' filename='detached_apex.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1pfeyiu01s5oob16py4021kjiljl' name='detached_apex.csv' table='[detached_apex#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='MLS #' ordinal='0' />
+            <column datatype='string' name='Status' ordinal='1' />
+            <column datatype='string' name='Address' ordinal='2' />
+            <column datatype='string' name='City' ordinal='3' />
+            <column datatype='string' name='Zip' ordinal='4' />
+            <column datatype='date' name='Closing Date' ordinal='5' />
+            <column datatype='string' name='Subdivision' ordinal='6' />
+            <column datatype='integer' name='LvngAreaSF' ordinal='7' />
+            <column datatype='integer' name='YrBlt' ordinal='8' />
+            <column datatype='integer' name='Beds' ordinal='9' />
+            <column datatype='integer' name='FBths' ordinal='10' />
+            <column datatype='integer' name='HBths' ordinal='11' />
+            <column datatype='string' name='Property Type' ordinal='12' />
+            <column datatype='real' name='List Price' ordinal='13' />
+            <column datatype='real' name='Sold Price' ordinal='14' />
+            <column datatype='integer' name='Days On Market' ordinal='15' />
+            <column datatype='string' name='HOA Y/N' ordinal='16' />
+            <column datatype='integer' name='Garage' ordinal='17' />
+            <column datatype='string' name='Acres' ordinal='18' />
+            <column datatype='real' name='Sold Price/List Price' ordinal='19' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1pfeyiu01s5oob16py4021kjiljl' name='detached_apex.csv' table='[detached_apex#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='MLS #' ordinal='0' />
+            <column datatype='string' name='Status' ordinal='1' />
+            <column datatype='string' name='Address' ordinal='2' />
+            <column datatype='string' name='City' ordinal='3' />
+            <column datatype='string' name='Zip' ordinal='4' />
+            <column datatype='date' name='Closing Date' ordinal='5' />
+            <column datatype='string' name='Subdivision' ordinal='6' />
+            <column datatype='integer' name='LvngAreaSF' ordinal='7' />
+            <column datatype='integer' name='YrBlt' ordinal='8' />
+            <column datatype='integer' name='Beds' ordinal='9' />
+            <column datatype='integer' name='FBths' ordinal='10' />
+            <column datatype='integer' name='HBths' ordinal='11' />
+            <column datatype='string' name='Property Type' ordinal='12' />
+            <column datatype='real' name='List Price' ordinal='13' />
+            <column datatype='real' name='Sold Price' ordinal='14' />
+            <column datatype='integer' name='Days On Market' ordinal='15' />
+            <column datatype='string' name='HOA Y/N' ordinal='16' />
+            <column datatype='integer' name='Garage' ordinal='17' />
+            <column datatype='string' name='Acres' ordinal='18' />
+            <column datatype='real' name='Sold Price/List Price' ordinal='19' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MLS #</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MLS #]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>MLS #</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Status]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Status</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Address]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Address</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Zip</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Zip]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Zip</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Closing Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Closing Date]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Closing Date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Subdivision</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Subdivision]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Subdivision</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LvngAreaSF</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LvngAreaSF]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>LvngAreaSF</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YrBlt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YrBlt]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>YrBlt</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Beds</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Beds]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Beds</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FBths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FBths]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>FBths</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HBths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[HBths]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>HBths</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Property Type]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Property Type</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>List Price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[List Price]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>List Price</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sold Price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sold Price]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Sold Price</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days On Market</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Days On Market]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Days On Market</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HOA Y/N</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HOA Y/N]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>HOA Y/N</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Garage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Garage]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Garage</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Acres</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Acres]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Acres</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sold Price/List Price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sold Price/List Price]</local-name>
+            <parent-name>[detached_apex.csv]</parent-name>
+            <remote-alias>Sold Price/List Price</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='F Bths' datatype='integer' name='[FBths]' role='measure' type='quantitative' />
+      <column caption='H Bths' datatype='integer' name='[HBths]' role='measure' type='quantitative' />
+      <column caption='Hoa Y/N' datatype='string' name='[HOA Y/N]' role='dimension' type='nominal' />
+      <column caption='Lvng Area SF' datatype='integer' name='[LvngAreaSF]' role='measure' type='quantitative' />
+      <column caption='Mls #' datatype='integer' name='[MLS #]' role='measure' type='quantitative' />
+      <column caption='Yr Blt' datatype='integer' name='[YrBlt]' role='dimension' type='quantitative' />
+      <column datatype='string' name='[Zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='detached_apex.csv' datatype='table' name='[__tableau_internal_object_id__].[detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='detached_apex.csv' id='detached_apex.csv_FBE60577E574468D9D50C3462CD6FAAC'>
+            <properties context=''>
+              <relation connection='textscan.1pfeyiu01s5oob16py4021kjiljl' name='detached_apex.csv' table='[detached_apex#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='MLS #' ordinal='0' />
+                  <column datatype='string' name='Status' ordinal='1' />
+                  <column datatype='string' name='Address' ordinal='2' />
+                  <column datatype='string' name='City' ordinal='3' />
+                  <column datatype='string' name='Zip' ordinal='4' />
+                  <column datatype='date' name='Closing Date' ordinal='5' />
+                  <column datatype='string' name='Subdivision' ordinal='6' />
+                  <column datatype='integer' name='LvngAreaSF' ordinal='7' />
+                  <column datatype='integer' name='YrBlt' ordinal='8' />
+                  <column datatype='integer' name='Beds' ordinal='9' />
+                  <column datatype='integer' name='FBths' ordinal='10' />
+                  <column datatype='integer' name='HBths' ordinal='11' />
+                  <column datatype='string' name='Property Type' ordinal='12' />
+                  <column datatype='real' name='List Price' ordinal='13' />
+                  <column datatype='real' name='Sold Price' ordinal='14' />
+                  <column datatype='integer' name='Days On Market' ordinal='15' />
+                  <column datatype='string' name='HOA Y/N' ordinal='16' />
+                  <column datatype='integer' name='Garage' ordinal='17' />
+                  <column datatype='string' name='Acres' ordinal='18' />
+                  <column datatype='real' name='Sold Price/List Price' ordinal='19' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='attached_apex' name='federated.1rv654i0bwqutf175ts2w1u5am9o' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1rv654i0bwqutf175ts2w1u5am9o'>
+            <column caption='Profit' datatype='string' name='[Calculation_557039024843464709]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF &#13;&#10;[Sold Price/List Price] &gt; 1&#13;&#10;THEN&#13;&#10;&quot;Profitable&quot;&#13;&#10;ELSE&#13;&#10;&quot;Not Profitable&quot;&#13;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Days On Market]' role='measure' type='quantitative' />
+            <column caption='Sold Price/List Price1' datatype='real' name='[Sold Price/List Price]' role='measure' type='quantitative' />
+            <column-instance column='[Sold Price/List Price]' derivation='Avg' name='[avg:Sold Price/List Price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_557039024843464709]' derivation='None' name='[none:Calculation_557039024843464709:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Days On Market]' derivation='None' name='[none:Days On Market:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1rv654i0bwqutf175ts2w1u5am9o].[none:Calculation_557039024843464709:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1rv654i0bwqutf175ts2w1u5am9o].[avg:Sold Price/List Price:qk]</rows>
+        <cols>[federated.1rv654i0bwqutf175ts2w1u5am9o].[none:Days On Market:qk]</cols>
+      </table>
+      <simple-id uuid='{B24C9873-D4AC-4CD3-9F36-93B2250F067F}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{28DA9909-6FCE-42D8-8DC6-A77EA89AC670}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='51'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1rv654i0bwqutf175ts2w1u5am9o].[none:Calculation_557039024843464709:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1rv654i0bwqutf175ts2w1u5am9o].[none:Calculation_557039024843464709:nk]</field>
+            <field>[federated.1rv654i0bwqutf175ts2w1u5am9o].[none:Days On Market:qk]</field>
+            <field>[federated.1rv654i0bwqutf175ts2w1u5am9o].[none:Sold Price/List Price:qk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{AF385B7A-8A99-4B18-A939-CD585B9A1649}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1571C268-8190-491D-BF0B-F96FEBDF2BF0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

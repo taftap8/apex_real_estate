@@ -1,7 +1,7 @@
 # Apex Real Estate
 Machine Learning housing predictions
 
-![Image of Apex Real Estate](apex.jpg)
+![Image of Apex Real Estate](https://hregsells.com/wp-content/uploads/2018/06/Downtown-Apex-1_1200-700x370.jpg)
 
 ## Group Members:
 * Alexandra Taft

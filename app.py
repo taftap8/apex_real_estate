@@ -18,11 +18,11 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['CORS_ORIGINS'] = '*'
 app.config['DEBUG'] = True
 
-# Route to render index.html template 
+# Route to render index.html template
 @app.route("/")
 def index():
 
-# Return template and data
+    # Return template and data
     return render_template("index.html")
 
 
@@ -30,10 +30,10 @@ def index():
 def predict(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
     print(year, bedrooms, bathrooms, area, halfbaths, garage, sub)
 
-    #load model
+    # load model
     model = load_model('model.h5')
 
-    #create dictionary for encoded labels and corresponding subdivision names
+    # create dictionary for encoded labels and corresponding subdivision names
     home_dict = {'Haddon Hall': 91,
                  'Beckett Crossing': 10,
                  'Stillwater': 210,
@@ -312,12 +312,12 @@ def predict(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
                  'Edwards Creek': 66,
                  'Valley View': 239}
 
-    #converting user input to encoded value
+    # converting user input to encoded value
     subdivision = home_dict.get(sub)
-    
+
     # casting input to int for enabling arithmetic for model
     input_row = [int(year), int(bedrooms), int(bathrooms), int(area),
-                  int(halfbaths), 16, int(garage), 0.99, subdivision]
+                 int(halfbaths), 16, int(garage), 0.99, subdivision]
     print(input_row)
     input_columns = ["YrBlt", "Beds", "FBths", "LvngAreaSF", "HBths",
                      "Days On Market", "Garage", "Sold Price/List Price", "Sub#"]
@@ -337,7 +337,7 @@ def predict(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
 #y = (y-y.min())/(y.max()-y.min())
 
 #print(x_min, x_max)
-#=================================================
+# =================================================
 
     #test_input = [year, 4 , 3, 1500, 0, 10, 1, 1, 193]
 
@@ -358,16 +358,9 @@ def predict(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
     data = {
         # we can convert back to integer in front end if needed
         "Result": str(Normal_output[0][0])
-   }
+    }
 
     return str(Normal_output[0][0])
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
-
-
 
 
 @app.route("/predict1/<year>/<bedrooms>/<bathrooms>/<area>/<halfbaths>/<garage>/<sub>", methods=["GET", "POST"])
@@ -377,70 +370,69 @@ def predict1(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
     model = load_model('townhome_model.h5')
 # summarize model.
 # model.summary()
-    townhome_dict =  {'Woodcreek':56,
-                    'Scotts Mill':36,
-                    'The Villages of Apex':45,
-                    'Walden Townes':50,
-                    'The Preserve at White Oak Creek':44,
-                    'Hempstead at Beaver Creek':20,
-                    'Salem Pointe':33,
-                    'West Haven Townhomes':52,
-                    'Sweetwater':41,
-                    'Old Mill Village':26,
-                    'Deer Creek':	10,
-                    'Middleton':23,
-                    'Smith Farm':39,
-                    'Salem Creek Townhomes':32,
-                    'Bella Casa':2,
-                    'Peak 502 at Beaver Creek':29,
-                    'The Orchard Villas':43,
-                    '540 Townes':0,
-                    'Seagroves Farm':38,
-                    'Center Street Station':8,
-                    'West Lake':53,
-                    'Townes at North Salem':48,
-                    'Townes at Westford':49,
-                    '55 James at Midtown': 1,
-                    'Scotts Mill at Bungalow Park':37,
-                    'Pemberley':30,
-                    'The Groves':	42,
-                    'Bradley Terrace':	4,
-                    'Miramonte':	24,
-                    'Heatherwood Townhomes': 19,
-                    'Promanade at Beaver Creek':31,
-                    'Haddon Hall':17,
-                    'Edgewater':13,
-                    'Woodbury':55,
-                    'Carriage Downs':6,
-                    'Green at Scotts Mill':16,
-                    'South Walk':	40,
-                    'Townes at Friendship Station':47,
-                    'Dogwood Ridge':	12,
-                    'Parkside at Bella Casa':28,
-                    'Wayland Grove':51,
-                    'Miramonte Townes':25,
-                    'CitiSide at Beaver Creek':9,
-                    'Glen Arbor':14,
-                    'Townes At Sugarland':	46,
-                    'Scots Laurel':34,
-                    'Westhaven':54,
-                    'Jamison Park':21,
-                    'Scottish Mills':35,
-                    'McKenzie Ridge':22,
-                    'Golders Green':15,
-                    'Bristol Walk':5,
-                    'Center Heights':7,
-                    'Olive Chapel Park':27,
-                    'Heatherbrook Townhomes':18,
-                    'Dogwood':11,
-                    'Bella Casa Townes':3
+    townhome_dict = {'Woodcreek': 56,
+                     'Scotts Mill': 36,
+                     'The Villages of Apex': 45,
+                     'Walden Townes': 50,
+                     'The Preserve at White Oak Creek': 44,
+                     'Hempstead at Beaver Creek': 20,
+                     'Salem Pointe': 33,
+                     'West Haven Townhomes': 52,
+                     'Sweetwater': 41,
+                     'Old Mill Village': 26,
+                     'Deer Creek':	10,
+                     'Middleton': 23,
+                     'Smith Farm': 39,
+                     'Salem Creek Townhomes': 32,
+                     'Bella Casa': 2,
+                     'Peak 502 at Beaver Creek': 29,
+                     'The Orchard Villas': 43,
+                     '540 Townes': 0,
+                     'Seagroves Farm': 38,
+                     'Center Street Station': 8,
+                     'West Lake': 53,
+                     'Townes at North Salem': 48,
+                     'Townes at Westford': 49,
+                     '55 James at Midtown': 1,
+                     'Scotts Mill at Bungalow Park': 37,
+                     'Pemberley': 30,
+                     'The Groves':	42,
+                     'Bradley Terrace':	4,
+                     'Miramonte':	24,
+                     'Heatherwood Townhomes': 19,
+                     'Promanade at Beaver Creek': 31,
+                     'Haddon Hall': 17,
+                     'Edgewater': 13,
+                     'Woodbury': 55,
+                     'Carriage Downs': 6,
+                     'Green at Scotts Mill': 16,
+                     'South Walk':	40,
+                     'Townes at Friendship Station': 47,
+                     'Dogwood Ridge':	12,
+                     'Parkside at Bella Casa': 28,
+                     'Wayland Grove': 51,
+                     'Miramonte Townes': 25,
+                     'CitiSide at Beaver Creek': 9,
+                     'Glen Arbor': 14,
+                     'Townes At Sugarland':	46,
+                     'Scots Laurel': 34,
+                     'Westhaven': 54,
+                     'Jamison Park': 21,
+                     'Scottish Mills': 35,
+                     'McKenzie Ridge': 22,
+                     'Golders Green': 15,
+                     'Bristol Walk': 5,
+                     'Center Heights': 7,
+                     'Olive Chapel Park': 27,
+                     'Heatherbrook Townhomes': 18,
+                     'Dogwood': 11,
+                     'Bella Casa Townes': 3
 
-}
-
+                     }
 
     subdivision = townhome_dict.get(sub)
     input_row = [int(year), int(bedrooms), int(bathrooms), int(area),
-                  int(halfbaths), 9, int(garage), 0.99, subdivision]
+                 int(halfbaths), 9, int(garage), 0.99, subdivision]
     print(input_row)
     input_columns = ["YrBlt", "Beds", "FBths", "LvngAreaSF", "HBths",
                      "Days On Market", "Garage", "Sold Price/List Price", "Sub#"]
@@ -460,7 +452,7 @@ def predict1(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
 #y = (y-y.min())/(y.max()-y.min())
 
 #print(x_min, x_max)
-#=================================================
+# =================================================
 
     #test_input = [year, 4 , 3, 1500, 0, 10, 1, 1, 193]
 
@@ -481,10 +473,11 @@ def predict1(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
     data = {
         # we can convert back to integer in front end if needed
         "Result": str(Normal_output[0][0])
-   }
+    }
 
-    #return str(Normal_output[0][0])
+    return str(Normal_output[0][0])
 
-    return "It worked"
+   
+
 if __name__ == "__main__":
     app.run(debug=True)

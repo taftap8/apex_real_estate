@@ -1,5 +1,6 @@
 # Apex Real Estate
 Machine Learning housing predictions
+November 2020
 
 ![Image of Apex Real Estate](https://hregsells.com/wp-content/uploads/2018/06/Downtown-Apex-1_1200-700x370.jpg)
 
@@ -13,15 +14,16 @@ Machine Learning housing predictions
 
 ### Project 3 - What would a house in Apex, NC sell for a year from now?
 
-Sub question 1: is there a predictable seasonal swing in price
-Sub question 2: Estimate house sale price by various features/ attributes
-Compare single family home and townhouses
-November 2020
+Sub question 1: Is there a better time of the year to seel my house?
+Sub question 2: Can we forecast home prices in Apex for 2021?
 
 
 ### Problem:
 1. Dataset: MLS Triangle Area
-2. What ML approach(es):
+2. What ML approach(es): Used tensorflow sequential becuase our number of predictors
+and need for a numerical outcome as opposed to a categorical.
+  * Chose MSE to measure our loss because it was predictive
+  * Built two models, one for single family homes and one for townhomes.
 3. Repository: https://github.com/taftap8/apex_real_estate
 
 

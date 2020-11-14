@@ -1,3 +1,5 @@
+#import dependents
+
 from numpy import loadtxt
 from keras.models import load_model
 from flask import Flask, render_template, redirect, url_for, Response, jsonify, request
@@ -14,18 +16,19 @@ CORS(app, resources={
         "origins": "*"
     }
 })
+#handle our CORS headers and origins
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['CORS_ORIGINS'] = '*'
 app.config['DEBUG'] = True
 
-# Route to render index.html template
+# Route to render index.html template, this will be our base route
 @app.route("/")
 def index():
 
     # Return template and data
     return render_template("index.html")
 
-
+#our main route to the first prediction, this will be for home stuff, the next route will be for townhomes
 @app.route("/predict/<year>/<bedrooms>/<bathrooms>/<area>/<halfbaths>/<garage>/<sub>", methods=["GET", "POST"])
 def predict(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
     print(year, bedrooms, bathrooms, area, halfbaths, garage, sub)
@@ -317,10 +320,10 @@ def predict(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
 
     # casting input to int for enabling arithmetic for model
     input_row = [int(year), int(bedrooms), int(bathrooms), int(area),
-                 int(halfbaths), 16, int(garage), 0.99, subdivision]
+                int(halfbaths), 16, int(garage), 0.99, subdivision]
     print(input_row)
     input_columns = ["YrBlt", "Beds", "FBths", "LvngAreaSF", "HBths",
-                     "Days On Market", "Garage", "Sold Price/List Price", "Sub#"]
+                    "Days On Market", "Garage", "Sold Price/List Price", "Sub#"]
     file_detached = "edited_house_data.csv"
     homes_data = pd.read_csv(file_detached)
 
@@ -362,7 +365,7 @@ def predict(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
 
     return str(Normal_output[0][0])
 
-
+#This will our route for townhomes
 @app.route("/predict1/<year>/<bedrooms>/<bathrooms>/<area>/<halfbaths>/<garage>/<sub>", methods=["GET", "POST"])
 def predict1(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
     print(year, bedrooms, bathrooms, area, halfbaths, garage, sub)
@@ -432,10 +435,10 @@ def predict1(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
 
     subdivision = townhome_dict.get(sub)
     input_row = [int(year), int(bedrooms), int(bathrooms), int(area),
-                 int(halfbaths), 9, int(garage), 0.99, subdivision]
+                int(halfbaths), 9, int(garage), 0.99, subdivision]
     print(input_row)
     input_columns = ["YrBlt", "Beds", "FBths", "LvngAreaSF", "HBths",
-                     "Days On Market", "Garage", "Sold Price/List Price", "Sub#"]
+                    "Days On Market", "Garage", "Sold Price/List Price", "Sub#"]
     file_attached = "townhouse_data_edited.csv"
     townhomes_data = pd.read_csv(file_attached)
 
@@ -477,7 +480,6 @@ def predict1(year, bedrooms, bathrooms, area, halfbaths, garage, sub):
 
     return str(Normal_output[0][0])
 
-   
-
+#return main
 if __name__ == "__main__":
     app.run(debug=True)

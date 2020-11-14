@@ -1,3 +1,4 @@
+
 console.log("I AM IN THE LOGIC FILE")
 var select = document.getElementById("subdivision");
 var hsubdivisions = [
@@ -384,13 +385,15 @@ function prediction() {
     var inputhomehalfbath = d3.select("#halfbaths").property("value")
     var inputhomegarage = d3.select("#garage").property("value")
     var inputhomesubdivision = d3.select("#subdivision").property("value")
-
+// create a dictionary for userinput
     user_input = {
         "year": inputhomeyear,
         "bedrooms": inputhomebedrooms, "bath": inputhomebath, "area": inputhomearea, "halfbath": inputhomehalfbath,
         "garage": inputhomegarage, "subdivision": inputhomesubdivision
     }
+    //console loggings for selection and input
     console.log("I HAVE SELECTED: " + inputtype)
+    //here we will create a conditional with an else. First condition will be for homes and the else for townhomes
     if(inputtype == "home") {
         console.log(inputhomeyear)
         d3.request("http://127.0.0.1:5000/predict/" + inputhomeyear + "/" + inputhomebedrooms + "/" + inputhomebath +"/" + inputhomearea + "/" + inputhomehalfbath +"/" + inputhomegarage +"/" + inputhomesubdivision).get(response => {
@@ -432,7 +435,4 @@ function prediction() {
                 `
         })
     })
-
-
-
 }};

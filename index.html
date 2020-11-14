@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Apex Real Estate Analysis</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/characters/apex.jpg" rel="icon">
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+  <script src="lodash.js"></script>
+
+  <script src="logic.js"></script>
+
+
+
+  <!-- =======================================================
+  * Template Name: OnePage - v2.1.0
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  * Please note that the template used from Bootstrapmade has been drastically altered; we are only using barebones foundation code for it. 
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="index.html">Apex Real Estate Analysis</a></h1>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#services">Prediction</a></li>
+          <li><a href="#portfolio">Tableau Views</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Headline Section ======= -->
+  <section id="title">
+    <div data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1><strong>Apex Real Estate</strong></h1>
+          <h3>Price Prediction and Market Analysis</h3>
+        </div>
+        <!--<div class="col-xl-7 col-lg-9 text-center">
+          <h2>Superhero stats, Villain searches, plus the mega ultimate Battle Royale!</h2>
+          <br>
+        </div>-->
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+
+          <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <img src="assets/img/characters/apex.jpg" class="img-fluid" class="d-block w-100" alt="..."
+                  style="width:90%;height:auto;">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/characters/kitchen.jpg" class="img-fluid" class="d-block w-100" alt="..."
+                  style="width:90%;height:auto;">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/characters/sfh.jpg" class="img-fluid" class="d-block w-100" alt="..."
+                  style="width:90%;height:auto;">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+
+    <!-- ======= Services/Dashboard Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2><strong>Prediction</strong></h2>
+          <p>Predict a home's price
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <aside class="filters">
+              <div class="panel panel-default">
+                <div class="panel-heading">Home Specifications</div>
+                <div class="panel-body">
+                  <form onsubmit='return false'>
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="hometype">Enter Home Type</label>
+                        <select id="hometype" name="hometype">
+                          <option value="choose">Choose Home Type</option>
+                          <option value="townhouse">Townhouse</option>
+                          <option value="home">Single Family Home</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <div class="form-group">
+                      <div class="col-md-6">
+                        <ul class="list-group" id="filters">
+                          <li class="filter list-group-item">
+                            <label for="year built">Enter year built</label>
+                            <input class="form-control" id="year" type="text" placeholder="2015">
+                          </li>
+                          <li class="filter list-group-item">
+                            <label for="bedrooms">Enter number of bedrooms</label>
+                            <input class="form-control" id="bedrooms" type="text" placeholder="3">
+                          </li>
+                          <li class="filter list-group-item">
+                            <label for="full bathrooms">Enter number of full bathrooms</label>
+                            <input class="form-control" id="baths" type="text" placeholder="2">
+                          </li>
+                          <li class="filter list-group-item">
+                            <label for="living square footage">Enter total square footage</label>
+                            <input class="form-control" id="sqft" type="text" placeholder="1800">
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="list-group" id="filters">
+                          <li class="filter list-group-item">
+                            <label for="half baths">Enter number of half baths</label>
+                            <input class="form-control" id="halfbaths" type="text" placeholder="1">
+                          </li>
+                          <li class="filter list-group-item">
+                            <label for="garage">Garage - Number of Cars</label>
+                            <input class="form-control" id="garage" type="text" placeholder="2">
+                          </li>
+                          <li class="filter list-group-item">
+                            <label for="year built">Enter Subdivision</label>
+                            <select id="subdivision">
+
+                            </select>
+                          </li>
+                          <li class="filter list-group-item">
+
+                          </li>
+                        </ul>
+                      </div>
+
+
+
+
+                    </div>
+                  </form>
+                  <div class="col-md-6">
+                    <button id="predict-btn" type="button" class="btn btn-default">Predict Price</button>
+                  </div>
+                </div>
+
+              </div>
+            </aside>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section><!-- End Sevices Section -->
+
+    <!-- ======= Portfolio/characters Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2><strong>Tableau Visualizations</strong></h2>
+          <p>This section will display interactive Tableau Visulations from out Apex real estate market data. </p>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <script type='text/javascript'
+              src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script>
+            <div class='tableauPlaceholder' style='width: 1000px; height: 500px;'><object class='tableauViz'
+                width='1000' height='500' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='&#47;t&#47;nathanbolt' />
+                <param name='name' value='Townhome_Workbook&#47;Avgzipcode' />
+                <param name='tabs' value='yes' />
+                <param name='toolbar' value='yes' />
+                <param name='showAppBanner' value='false' /></object></div>
+          </div>
+        </div>
+
+        <h1>Tableau View</h1>
+        <hr>
+
+        <div class="row">
+          <div class="col-md-12">
+            <script type='text/javascript'
+              src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script>
+            <div class='tableauPlaceholder' style='width: 1000px; height: 500px;'><object class='tableauViz'
+                width='1000' height='500' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='&#47;t&#47;nathanbolt' />
+                <param name='name' value='detached_LPtoSP&#47;AvgZipcode' />
+                <param name='tabs' value='yes' />
+                <param name='toolbar' value='yes' />
+                <param name='showAppBanner' value='false' /></object></div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </section><!-- End Portfolio Section -->
+
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-6 d-flex align-items-stretch" data-aos=" fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/Arlette.png" class="img-fluid" alt="">
+
+              </div>
+              <div class="member-info">
+                <h4>Arlette Varela</h4>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/Anthony.png" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Anthony English</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/Nathan.png" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Nathan Bolt</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/Niru.png" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Nirupama Shankar</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/Xan.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Alexandra Taft</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Team Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>OnePage</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="logic.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

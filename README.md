@@ -12,7 +12,7 @@ November 2020
 * Nirupama Shankar
 
 
-### Project 3 - What would a house in Apex, NC sell for a year from now?
+### Project 3 - What would a house in Apex, NC sell for now?
 
 Sub question 1: Is there a better time of the year to seel my house?
 Sub question 2: Can we forecast home prices in Apex for 2021?
